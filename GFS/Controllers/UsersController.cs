@@ -13,7 +13,10 @@ namespace GFS.Controllers
     public class UsersController : Controller
     {
         private GFSContext db = new GFSContext();
-
+        public string Test()
+        {
+            return null;
+        }
         // GET: Users
         public ActionResult Index()
         {
