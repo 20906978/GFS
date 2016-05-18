@@ -48,6 +48,8 @@ namespace GFS.Models
         public System.Data.Entity.DbSet<GFS.Models.StockCategory> StockCategories { get; set; }
 
         public System.Data.Entity.DbSet<GFS.Models.Payment> Payments { get; set; }
+
+        public System.Data.Entity.DbSet<GFS.Models.LoginViewModel> LoginViewModels { get; set; }
     
     }
 }

@@ -46,16 +46,16 @@ namespace GFS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "userid,Id,firstname,lastname,CustEmail,user,password,ConfirmPassword,estatus,RememberMe")] User user)
+        public ActionResult Create([Bind(Include = "userid,Id,firstname,lastname,CustEmail,user,password,ConfirmPassword,estatus,RememberMe")] User users)
         {
             if (ModelState.IsValid)
             {
-                db.Users.Add(user);
+                db.Users.Add(users);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(user);
+            return View(users);
         }
 
         // GET: Users/Edit/5
